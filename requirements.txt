@@ -1,0 +1,12 @@
+asgiref
+Django
+django-cleanup
+django-crispy-forms
+django-solo
+django-tinymce4-lite
+jsmin
+mysqlclient
+Pillow
+python-dotenv
+pytz
+sqlparse

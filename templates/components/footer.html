@@ -1,0 +1,29 @@
+{% load site_settings %}
+{% load solo_tags %}
+{% get_solo 'settings.SiteConfiguration' as site_config %}
+
+<footer>
+	<div class="footer-top">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-md-6">
+                    <b>{{ site_config.name }}</b><br>
+                    {{ site_config.description_short }}
+				</div>
+				<div class="col-12 col-md-6">
+					<div class="social float-right">
+                        {% social_networks as networks %}
+                        {% for network in networks  %}
+                            <a href="{{ network.url }}" class="light pl-4"><i class="{{ network.fa_icon }} fa-lg"></i></a>
+                        {% endfor %}
+					</div>
+				</div>
+			</div>
+    	</div>
+	</div>
+	<div class="footer-bottom">
+		<div class="container text-center">
+            <a href="https://github.com/duplxey/NForum" class="light"><small class="transparent">Powered by NForum</small></a>
+		</div>
+	</div>
+</footer>
