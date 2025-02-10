@@ -13,7 +13,6 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.urls import re_path
 from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
@@ -21,17 +20,12 @@ from django.conf import settings
 
 from forum import views as f_views
 
-admin.site.site_header = "NForum"
-admin.site.site_title = "Welcome to the Control Panel."
-admin.site.index_title = "Welcome to the Control Panel."
-
 urlpatterns = [
     path('', f_views.home_view, name='index'),
     path('forum/', include('forum.urls')),
     path('search/', include('search.urls')),
     path('members/', include('members.urls')),
     path('admin/', admin.site.urls),
-    re_path(r'^tinymce/', include('tinymce.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

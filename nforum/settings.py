@@ -44,7 +44,7 @@ INSTALLED_APPS = [
 
     'crispy_forms',
     'crispy_bootstrap4',
-    'tinymce',
+    'django_prose_editor',
 
     'members',
     'search',

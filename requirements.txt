@@ -3,7 +3,7 @@ Django
 django-cleanup
 django-crispy-forms
 django-solo
-django-tinymce4-lite
+django-prose-editor
 jsmin
 mysqlclient
 Pillow
